@@ -1,0 +1,31 @@
+@mixin buttonColor($className) {
+  @if $className == "white" {
+    &.#{$className} {
+      border: 1px solid #b9b9b9;
+      background: #fff;
+      color: #000;
+    }
+  } @else if $className == "gray" {
+    &.#{$className} {
+      background: #b9b9b9;
+      color: #fff;
+    }
+  } @else if $className == "red" {
+    &.#{$className} {
+      background: #f84646;
+      color: #fff;
+    }
+  }
+}
+
+@mixin buttonSize($size) {
+  // min-width, height, padding, font-size -> 크기는 가로, 세로, 여백, 글씨크기에 따라서 달라진다.
+  @if $size == "sm" {
+    &.#{$size} {
+      height: 40px;
+      padding: 0 20px;
+      font-size: 14px;
+      border-radius: 5px;
+    }
+  }
+}

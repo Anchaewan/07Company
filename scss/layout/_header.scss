@@ -1,0 +1,8 @@
+.header {
+  @include position(50%, 35px);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 40px;
+  width: 1440px;
+}
