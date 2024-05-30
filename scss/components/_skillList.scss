@@ -1,0 +1,21 @@
+.skill-list {
+  @extend .center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 83px 116px;
+  text-align: center;
+
+  @for $index from 1 through 6 {
+    .ico#{$index} {
+      &::before {
+        content: url(#{$imgurl}ico_skill#{$index}.svg);
+      }
+    }
+  }
+  li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+}

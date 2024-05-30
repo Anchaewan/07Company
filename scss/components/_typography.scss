@@ -6,12 +6,78 @@ body {
 
 // 제목정의
 
-$heading: base #000 45px 300, sm #000 35px 300;
+$heading: xl #000 64px 800 82px, lg #000 36px 800 null, sm #000 24px 800 null;
+$headingTablet: xl null 56px null 73.5px, lg null 56px null 73.5px;
+$headingMobile: xl null 42px null 57.5px, lg null 42px null 57.5px;
 
-@each $class, $color, $fontSize, $fontWeight in $heading {
+@each $class, $color, $fontSize, $fontWeight, $lineHeight in $heading {
   .heading-#{$class} {
     color: $color;
     font-size: $fontSize;
     font-weight: $fontWeight;
+    line-height: $lineHeight;
+  }
+}
+
+@each $class, $color, $fontSize, $fontWeight, $lineHeight in $headingTablet {
+  @include tablet {
+    .heading-#{$class} {
+      color: $color;
+      font-size: $fontSize;
+      font-weight: $fontWeight;
+      line-height: $lineHeight;
+    }
+  }
+}
+
+@each $class, $color, $fontSize, $fontWeight, $lineHeight in $headingMobile {
+  @include mobile {
+    .heading-#{$class} {
+      color: $color;
+      font-size: $fontSize;
+      font-weight: $fontWeight;
+      line-height: $lineHeight;
+    }
+  }
+}
+
+//텍스트정의
+
+$text: xl #000 24px 400 39.5px 0.2px, lg #000 20px 400 36px 0.2px, md #000 18px 400 28px 0.2px,
+  sm #000 35px 300 20px 0.2px;
+$textTablet: lg null 16px null 28px null, md null 18px 400 28px 0.2px;
+$textMobile: lg null 12px null 23px null, md null 12px null 23px null;
+
+@each $class, $color, $fontSize, $fontWeight, $lineHeight, $letterSpacing in $text {
+  .text-#{$class} {
+    color: $color;
+    font-size: $fontSize;
+    font-weight: $fontWeight;
+    line-height: $lineHeight;
+    letter-spacing: $letterSpacing;
+  }
+}
+
+@each $class, $color, $fontSize, $fontWeight, $lineHeight, $letterSpacing in $textTablet {
+  @include tablet {
+    .text-#{$class} {
+      color: $color;
+      font-size: $fontSize;
+      font-weight: $fontWeight;
+      line-height: $lineHeight;
+      letter-spacing: $letterSpacing;
+    }
+  }
+}
+
+@each $class, $color, $fontSize, $fontWeight, $lineHeight, $letterSpacing in $textMobile {
+  @include mobile {
+    .text-#{$class} {
+      color: $color;
+      font-size: $fontSize;
+      font-weight: $fontWeight;
+      line-height: $lineHeight;
+      letter-spacing: $letterSpacing;
+    }
   }
 }

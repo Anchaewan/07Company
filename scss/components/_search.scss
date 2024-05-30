@@ -1,0 +1,22 @@
+.search {
+  width: 502px;
+  border-radius: 8px;
+  background: #fff;
+  padding: 6px;
+  fieldset {
+    display: grid;
+    gap: 6px;
+    grid-template-columns: 1fr min-content;
+    align-items: center;
+  }
+  input {
+    border: none;
+    margin-left: 32px;
+  }
+  button {
+    white-space: nowrap;
+  }
+  legend {
+    display: none;
+  }
+}

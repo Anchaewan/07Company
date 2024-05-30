@@ -27,5 +27,12 @@
       font-size: 14px;
       border-radius: 5px;
     }
+  } @else if $size == "lg" {
+    &.#{$size} {
+      height: 61px;
+      padding: 0 37px;
+      font-size: 16px;
+      border-radius: 8px;
+    }
   }
 }
