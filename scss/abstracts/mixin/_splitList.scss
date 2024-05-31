@@ -1,0 +1,19 @@
+@mixin splitList($method, $bg, $width, $height, $space) {
+  li {
+    display: flex;
+    align-items: center;
+    + li {
+      &::before {
+        content: "";
+        width: $width;
+        height: $height;
+        margin: 0 $space;
+        @if $method == "bg" or $method == "b" or $method == "image" {
+          @include background($bg, null);
+        } @else if $method == "line" or $method == "l" or $method == "bar" {
+          background-color: $bg;
+        }
+      }
+    }
+  }
+}

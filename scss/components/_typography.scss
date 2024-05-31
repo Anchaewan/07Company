@@ -6,9 +6,11 @@ body {
 
 // 제목정의
 
-$heading: xl #000 64px 800 82px, lg #000 36px 800 null, sm #000 24px 800 null;
-$headingTablet: xl null 56px null 73.5px, lg null 56px null 73.5px;
-$headingMobile: xl null 42px null 57.5px, lg null 42px null 57.5px;
+$heading: xxl #000 64px 800 82px, xxl2 #2e2e2e 64px 700 76px, xl #000 48px 800 64px,
+  lg #000 36px 800 null, sm #000 24px 800 null;
+$headingTablet: xxl2 null 58px null 59.5px, xxl null 56px null 73.5px, lg null 56px null 73.5px;
+$headingMobile: xxl2 null 36px null 41.5px, xxl null 42px null 57.5px, lg null 24px null null,
+  xl null 36px 47px null;
 
 @each $class, $color, $fontSize, $fontWeight, $lineHeight in $heading {
   .heading-#{$class} {
@@ -16,6 +18,7 @@ $headingMobile: xl null 42px null 57.5px, lg null 42px null 57.5px;
     font-size: $fontSize;
     font-weight: $fontWeight;
     line-height: $lineHeight;
+    word-break: break-all;
   }
 }
 
@@ -43,10 +46,11 @@ $headingMobile: xl null 42px null 57.5px, lg null 42px null 57.5px;
 
 //텍스트정의
 
-$text: xl #000 24px 400 39.5px 0.2px, lg #000 20px 400 36px 0.2px, md #000 18px 400 28px 0.2px,
-  sm #000 35px 300 20px 0.2px;
-$textTablet: lg null 16px null 28px null, md null 18px 400 28px 0.2px;
-$textMobile: lg null 12px null 23px null, md null 12px null 23px null;
+$text: xl #000 24px 400 39.5px 0.2px, lg #000 20px 400 36px 0.2px, sm #808080 16px 400 32px null,
+  md #000 18px 400 28px 0.2px;
+$textTablet: lg null 16px null 28px null, md null 16px null 28px null, sm null 14px null 28.5px null;
+$textMobile: lg null 12px null 23px null, xl null 12px null 22px null, md null 14px 400 32px null,
+  sm null 14px null 28.5px null;
 
 @each $class, $color, $fontSize, $fontWeight, $lineHeight, $letterSpacing in $text {
   .text-#{$class} {

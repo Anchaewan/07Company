@@ -6,12 +6,15 @@
 @import "./abstracts/mixin/select";
 @import "./abstracts/mixin/position";
 @import "./abstracts/mixin/avatar";
+@import "./abstracts/mixin/splitList";
 @import "./base/reset";
 @import "./components/typography";
 @import "./components/form";
 @import "./components/button";
 @import "./components/search";
 @import "./components/skillList";
+@import "./components/step";
+@import "./components/introduce";
 @import "./layout/space";
 @import "./layout/align";
 @import "./components/gnb";

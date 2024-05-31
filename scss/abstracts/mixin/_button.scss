@@ -18,7 +18,7 @@
   }
 }
 
-@mixin buttonSize($size) {
+@mixin buttonSize($size, $minwidth: null) {
   // min-width, height, padding, font-size -> 크기는 가로, 세로, 여백, 글씨크기에 따라서 달라진다.
   @if $size == "sm" {
     &.#{$size} {
@@ -27,6 +27,13 @@
       font-size: 14px;
       border-radius: 5px;
     }
+  } @else if $size == "base" {
+    &.#{$size} {
+      height: 48px;
+      padding: 0 20px;
+      font-size: 14px;
+      border-radius: 8px;
+    }
   } @else if $size == "lg" {
     &.#{$size} {
       height: 61px;
@@ -34,5 +41,8 @@
       font-size: 16px;
       border-radius: 8px;
     }
+  }
+  @if $minwidth {
+    min-width: $minwidth;
   }
 }

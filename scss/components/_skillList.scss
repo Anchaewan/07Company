@@ -5,6 +5,15 @@
   gap: 83px 116px;
   text-align: center;
 
+  @include tablet {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include mobile {
+    grid-template-columns: 1fr;
+    gap: 80px;
+  }
+
   @for $index from 1 through 6 {
     .ico#{$index} {
       &::before {

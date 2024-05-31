@@ -1,0 +1,35 @@
+.step {
+  @include splitList(b, "ico_arrow_right.svg", 32px, 32px, 47px);
+  display: flex;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 31px;
+  @include tablet {
+    font-size: 14px;
+    @include splitList(b, "ico_arrow_right.svg", 28px, 28px, 36px);
+  }
+  @include mobile {
+    @include splitList(b, "ico_arrow_right.svg", 36px, 36px, 40px);
+    flex-direction: column;
+    li {
+      flex-direction: column;
+    }
+    ::before {
+      transform: rotate(90deg);
+      margin: 40px 0 !important;
+    }
+  }
+}
+//   li {
+//     display: flex;
+//     align-items: center;
+//     + li {
+//       &::before {
+//         @include background("ico_arrow_right.svg", null);
+//         content: "";
+//         width: 32px;
+//         height: 32px;
+//         margin: 0 47px;
+//       }
+//     }
+//   }

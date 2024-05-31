@@ -2,6 +2,9 @@
   @include buttonColor("red");
   @include buttonSize("sm");
   @include buttonSize("lg");
+  &.m-width {
+    @include buttonSize("base", 160px);
+  }
 }
 
 .btn-menu {
